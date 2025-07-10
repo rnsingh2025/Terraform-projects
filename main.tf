@@ -6,17 +6,23 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "k8s-project-bucket-s3"
-    key            = "terraform.tfstate"
-    region         = "us-east-1"
-    
+    bucket = "k8s-project-bucket-s3"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+
   }
 }
 provider "aws" {
   region = "us-east-1"
 }
 
-module "S3" {
-  source      = "./modules/s3"
-  bucket_name = var.bucket_name
+# module "S3" {
+#   source      = "./modules/s3"
+#   bucket_name = var.bucket_name
+# }
+
+module "VPC" {
+  source    = "./modules/VPC"
+  vpc_cidr  = var.vpc_cidr
+  vpc_name  = var.vpc_name
 }
