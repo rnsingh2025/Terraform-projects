@@ -1,0 +1,13 @@
+vault.sh
+.tfvars
+terraform.tfvars
+.terraform
+*.tfstate
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+terraform.rc
+*.pem
+*.crt
+*.key
