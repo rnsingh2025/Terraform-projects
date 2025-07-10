@@ -11,3 +11,4 @@ terraform.rc
 *.pem
 *.crt
 *.key
+terraform.tfstate.backup
