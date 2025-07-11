@@ -26,3 +26,8 @@ module "VPC" {
   vpc_cidr  = var.vpc_cidr
   vpc_name  = var.vpc_name
 }
+module "public_security_group" {
+  source          = "./modules/SecurityGroup"
+  vpc_id          = module.VPC.vpc_id
+  public_sg_name  = var.public_sg_name
+}

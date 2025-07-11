@@ -13,3 +13,11 @@ module "public_subnet" {
   public_subnet_az = var.public_subnet_az1
   
 }
+module "private_subnet" {
+  source = "./privatesubnet"
+  vpc_id = aws_vpc.vpc.id
+  private_subnet_cidr = var.private_subnet_block
+  private_subnet_az = var.private_subnet_az1
+  public_subnet_id = module.public_subnet.pub_subnet_id
+  vpc_name = var.vpc_name
+}

@@ -13,3 +13,10 @@ variable "vpc_name" {
   type        = string
   default     = "k8s-vpc"
 }
+
+variable "public_sg_name" {
+  description = "The name of the public security group"
+  type        = string
+  default     = "k8s-public-security-group"
+
+}
