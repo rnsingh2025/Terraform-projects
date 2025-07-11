@@ -30,4 +30,5 @@ module "public_security_group" {
   source          = "./modules/SecurityGroup"
   vpc_id          = module.VPC.vpc_id
   public_sg_name  = var.public_sg_name
+  private_sg_name = var.private_sg_name
 }

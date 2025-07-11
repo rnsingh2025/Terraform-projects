@@ -20,3 +20,8 @@ variable "public_sg_name" {
   default     = "k8s-public-security-group"
 
 }
+variable "private_sg_name" {
+  description = "The name of the private security group"
+  type        = string
+  default     = "k8s-private-security-group"
+}
