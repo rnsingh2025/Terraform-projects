@@ -24,25 +24,25 @@ resource "aws_security_group" "private_sg" {
   vpc_id      = var.vpc_id
 
   ingress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]  # Adjust this as needed for your security requirements
-    security_groups = [aws_security_group.publicsg.id]  # Allow traffic from the public security group
+    from_port       = 0
+    to_port         = 0
+    protocol        = "-1"
+    cidr_blocks     = ["0.0.0.0/0"]                    # Adjust this as needed for your security requirements
+    security_groups = [aws_security_group.publicsg.id] # Allow traffic from the public security group
   }
   ingress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-    self = true
-    }
+    self        = true
+  }
 
   egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
-  } 
+  }
 }
 

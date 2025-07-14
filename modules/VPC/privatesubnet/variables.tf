@@ -1,7 +1,7 @@
 variable "vpc_id" {
   description = "The ID of the VPC"
   type        = string
-  
+
 }
 
 variable "private_subnet_cidr" {
@@ -19,8 +19,8 @@ variable "private_subnet_az" {
 variable "vpc_name" {
   description = "The name of the VPC"
   type        = string
-    default     = "k8s-vpc"
-    }
+  default     = "k8s-vpc"
+}
 variable "public_subnet_id" {
   description = "The ID of the public subnet"
   type        = string

@@ -1,7 +1,7 @@
 variable "vpc_id" {
   description = "The ID of the VPC"
   type        = string
-  
+
 }
 variable "public_sg_name" {
   description = "The name of the public security group"

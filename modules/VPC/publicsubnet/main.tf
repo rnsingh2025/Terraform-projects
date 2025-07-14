@@ -6,7 +6,7 @@ resource "aws_subnet" "public_subnet" {
 
   tags = {
     Name = "${var.vpc_name}-public-subnet"
-}
+  }
 }
 resource "aws_internet_gateway" "pub_igw" {
   vpc_id = var.vpc_id
