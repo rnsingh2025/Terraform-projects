@@ -1,7 +1,7 @@
 variable "pem_file_name" {
   description = "The name of the PEM file to be used for EC2 instances"
   type        = string
-  default     = "k8s-project-key.pem"
+  default     = "k8s-project-key"
 }
 variable "public_subnet_id" {
   description = "The ID of the public subnet"

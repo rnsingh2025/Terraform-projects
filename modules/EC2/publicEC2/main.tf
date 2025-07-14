@@ -13,6 +13,6 @@ resource "aws_instance" "public_ec2" {
     delete_on_termination = true
   }
     tags = {
-        Name = "PublicEC2-${each.key}"
+        Name = "${each.key}"
     }
 }
