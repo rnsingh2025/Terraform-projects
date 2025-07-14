@@ -36,4 +36,6 @@ module "EC2" {
   source = "./modules/EC2"
   public_subnet_id         = module.VPC.public_subnet_id
   public_security_group_id = module.public_security_group.public_security_group_id
+  private_subnet_id        = module.VPC.private_subnet_id
+  private_security_group_id = module.public_security_group.private_security_group_id
 }

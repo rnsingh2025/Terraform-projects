@@ -11,3 +11,12 @@ variable "public_security_group_id" {
   description = "The ID of the public security group"
   type        = string
 }
+
+variable "private_subnet_id" {
+  description = "The ID of the private subnet"
+  type        = string
+}
+variable "private_security_group_id" {
+  description = "The ID of the private security group"
+  type        = string
+}

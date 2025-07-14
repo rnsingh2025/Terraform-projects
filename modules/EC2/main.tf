@@ -11,4 +11,10 @@ module "publicEC2" {
  
 }
 
+module "privateEC2" {
+  source                   = "./privateEC2"
+  pem_file_name            = var.pem_file_name
+  private_subnet_id = var.private_subnet_id
+  private_security_group_id = var.private_security_group_id
 
+}
