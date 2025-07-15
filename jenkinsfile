@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    triggers {
+        githubPush()
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'terraform', url: 'https://github.com/rnsingh2025/Terraform-projects.git'
+            }
+        }
+        stage('Terraform Init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+      /* stage('Terraform Plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+        stage('Terraform Apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        } */
+    }
+    
+    post {
+        always {
+        echo 'Cleaning up...'
+        }
+    }
+
+}
