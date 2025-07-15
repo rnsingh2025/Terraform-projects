@@ -1,6 +1,6 @@
 vault.sh
-.tfvars
-terraform.tfvars
+
+
 .terraform
 *.tfstate
 override.tf
