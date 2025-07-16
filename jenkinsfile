@@ -23,8 +23,10 @@ pipeline {
             steps {
                 sh 'terraform apply -auto-approve'
             }
+        }
     }
     
+
     post {
         always {
         echo 'Cleaning up...'
