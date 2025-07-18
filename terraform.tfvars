@@ -1,1 +1,0 @@
-bucket_name = "k8s-project-bucket-s3"
